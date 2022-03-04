@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x8A55717B307182dbA8D7d1ED6D56154dEe79e93E",
+  "SCAN_LINK": "https://ropsten.etherscan.io/token/0x8A55717B307182dbA8D7d1ED6D56154dEe79e93E",
+  "NETWORK": {
+    "NAME": "Ethereum",
+    "SYMBOL": "Eth",
+    "ID": 3
+  },
+  "NFT_NAME": "Godjira Mfers",
+  "SYMBOL": "GODJIRAMF",
+  "MAX_SUPPLY": 3333,
+  "WEI_COST": 15000000000000000,
+  "DISPLAY_COST": 0.15,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/the-stripes-nft",
+  "SHOW_BACKGROUND": true
+}
