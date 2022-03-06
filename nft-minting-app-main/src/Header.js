@@ -13,7 +13,7 @@ import twitter from "./icons/twitter.svg";
 
 export default function Header() {
 	return (
-		<AppBar style={{ background: "#212529" }} position="static">
+		<AppBar elevation={0} style={{ background: "#212529" }} position="static">
 			<Toolbar>
 				{/*Inside the IconButton, we 
            can render various icons*/}
