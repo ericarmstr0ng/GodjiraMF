@@ -24,13 +24,17 @@ export default function Header() {
 				{/* The Typography component applies 
            default font weights and sizes */}
 				<Typography mx={4} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-					<img mr={10} src={require("./icons/logo192.png").default}></img>
+					<img mr={10} src={require("./icons/GMFBanner.jpeg").default}></img>
 				</Typography>
 				<Typography mx={8} align="right" variant="h6" component="div" sx={{ flexGrow: 1 }}>
 					<a href="https://twitter.com/" rel="noreferrer">
 						<img src={require("./icons/twitter.svg").default}></img>
 					</a>
-					<a style={{ marginLeft: ".8rem" }} href="https://opensea.io/" rel="noreferrer">
+					<a
+						style={{ marginLeft: ".8rem" }}
+						href="https://testnets.opensea.io/collection/godjira-mfers-nft"
+						rel="noreferrer"
+					>
 						<img src={require("./icons/opensea.svg").default}></img>
 					</a>
 				</Typography>

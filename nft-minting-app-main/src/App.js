@@ -442,7 +442,7 @@ function App() {
 						<s.Container flex={1} jc={"center"} ai={"center"}>
 							<StyledImg
 								alt={"example"}
-								src={"/config/images/mfergirls.gif"}
+								src={"/config/images/GodjiraGif.gif"}
 								style={{ transform: "scaleX(-1)" }}
 							/>
 						</s.Container>
@@ -482,13 +482,22 @@ function App() {
 					About
 				</s.TextTitle>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-					We are the Godjira mfers
+					We are the final fusion! Godjira mfers by sarjira.
+				</s.TextDescription>
+				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
+					Godjira mfers by sarjira.
 				</s.TextDescription>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
 					No official discord. No roadmap. No drama. Just mfing vibes!
 				</s.TextDescription>
-        <s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-        Like Sartoshi said, “there is no king, ruler, or defined roadmap--and mfers can build whatever they can think of with these mfers”.
+				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
+					Godjira mfers is a 3,333 unit collection that was inspired by sartoshi himself & the bad ass
+					community at Project Godjira.
+				</s.TextDescription>
+				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
+					This collection consists of over 72 unique hand drawn traits spanning various rarities with no two
+					alike and 8 very special 1 of 1’s. No official discord. No roadmap. But most importantly - No
+					boundaries! Feel free to use your Godjira mfer in any way you want.
 				</s.TextDescription>
 			</s.pageContainer>
 		</s.Screen>
