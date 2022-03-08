@@ -12,7 +12,7 @@ export const StyledButton = styled.button`
 	padding: 10px;
 	// border-radius: 50px;
 	border: none;
-	background-color: var(--secondary);
+	background-color: firebrick;
 	padding: 10px;
 	font-weight: bold;
 	color: var(--secondary-text);
@@ -32,7 +32,7 @@ export const StyledRoundButton = styled.button`
 	padding: 10px;
 	border-radius: 100%;
 	border: none;
-	background-color: var(--primary);
+	background-color: firebrick;
 	padding: 10px;
 	font-weight: bold;
 	font-size: 15px;
@@ -200,6 +200,11 @@ function App() {
 				image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
 			>
 				<Header />
+				<s.Container flex={1} jc={"center"} ai={"center"}>
+					{/* <StyledImg alt={"example"} src={"/config/images/GodjiraMferLogo.png"} /> */}
+					<img mr={10} src={require("./icons/GodjiraMferLogo.png").default}></img>
+				</s.Container>
+
 				<s.Container
 					flex={1}
 					// ai={"center"}
@@ -210,6 +215,7 @@ function App() {
           <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         </a>
         <s.SpacerSmall /> */}
+
 					<s.TextTitle
 						style={{
 							textAlign: "center",
@@ -234,7 +240,7 @@ function App() {
 							jc={"center"}
 							ai={"center"}
 							style={{
-								backgroundColor: "var(--accent)",
+								// backgroundColor: "var(--accent)",
 								padding: 24,
 								borderRadius: 24,
 								// border: "4px dashed var(--secondary)",
@@ -382,6 +388,7 @@ function App() {
 													style={{
 														textAlign: "center",
 														color: "var(--accent-text)",
+														fontSize: "30px",
 													}}
 												>
 													{mintAmount}
@@ -440,11 +447,7 @@ function App() {
 						</s.Container>
 						<s.SpacerLarge />
 						<s.Container flex={1} jc={"center"} ai={"center"}>
-							<StyledImg
-								alt={"example"}
-								src={"/config/images/GodjiraGif.gif"}
-								style={{ transform: "scaleX(-1)" }}
-							/>
+							<StyledImg alt={"example"} src={"/config/images/GodjiraGif.gif"} />
 						</s.Container>
 					</ResponsiveWrapper>
 					<s.SpacerMedium />

@@ -80,13 +80,13 @@ export const TextSubTitle = styled.p`
 
 export const TextDescription = styled.p`
 	color: var(--primary-text);
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.6;
 `;
 
 export const smallText = styled.p`
 	color: var(--primary-text);
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 1;
 `;
 

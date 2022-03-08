@@ -23,9 +23,9 @@ export default function Header() {
 				</IconButton> */}
 				{/* The Typography component applies 
            default font weights and sizes */}
-				<Typography mx={4} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-					<img mr={10} src={require("./icons/GMFBanner.jpeg").default}></img>
-				</Typography>
+				{/* <Typography mx={4} variant="h6" component="div" sx={{ flexGrow: 1 }}>
+					<img mr={10} src={require("./icons/GodjiraMferLogo.png").default}></img>
+				</Typography> */}
 				<Typography mx={8} align="right" variant="h6" component="div" sx={{ flexGrow: 1 }}>
 					<a href="https://twitter.com/" rel="noreferrer">
 						<img src={require("./icons/twitter.svg").default}></img>
