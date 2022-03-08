@@ -225,16 +225,20 @@ function App() {
 							color: "var(--accent-text)",
 						}}
 					>
-						Godjira Mfers Mints
+						Godjira Mfers Mint
 					</s.TextTitle>
 					<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
 						The collection is based on the Ethereum blockchain and includes 3,333 Godjira Mfers
 					</s.TextDescription>
+					<s.SpacerLarge />
+					<s.Container flex={1} jc={"center"} ai={"center"}>
+						<StyledImg alt={"example"} src={"/config/images/GodjiraGif.gif"} />
+					</s.Container>
 					<ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
 						{/* <s.Container flex={1} jc={"center"} ai={"center"}>
 						<StyledImg alt={"example"} src={"/config/images/example.gif"} />
 					</s.Container> */}
-						<s.SpacerLarge />
+
 						<s.Container
 							flex={1}
 							jc={"center"}
@@ -244,7 +248,7 @@ function App() {
 								padding: 24,
 								borderRadius: 24,
 								// border: "4px dashed var(--secondary)",
-								boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+								// boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
 							}}
 						>
 							{/* <s.TextTitle
@@ -330,12 +334,9 @@ function App() {
 							) : (
 								<>
 									<s.TextTitle style={{ textAlign: "center", color: "var(--accent-text)" }}>
-										1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL}.
+										{CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL}. (Excluding gas fees.)
 									</s.TextTitle>
-									<s.SpacerXSmall />
-									<s.TextDescription style={{ textAlign: "center", color: "var(--accent-text)" }}>
-										Excluding gas fees.
-									</s.TextDescription>
+
 									<s.SpacerSmall />
 									{blockchain.account === "" || blockchain.smartContract === null ? (
 										<s.Container ai={"center"} jc={"center"}>
@@ -454,10 +455,6 @@ function App() {
 									mint your NFT. We recommend that you don't lower the gas limit.
 								</s.smallText>
 							</s.Container> */}
-						</s.Container>
-						<s.SpacerLarge />
-						<s.Container flex={1} jc={"center"} ai={"center"}>
-							<StyledImg alt={"example"} src={"/config/images/GodjiraGif.gif"} />
 						</s.Container>
 					</ResponsiveWrapper>
 					<s.SpacerMedium />
