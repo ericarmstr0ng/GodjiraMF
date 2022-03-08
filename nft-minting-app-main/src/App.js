@@ -202,7 +202,7 @@ function App() {
 				<Header />
 				<s.Container flex={1} jc={"center"} ai={"center"}>
 					{/* <StyledImg alt={"example"} src={"/config/images/GodjiraMferLogo.png"} /> */}
-					<img mr={10} src={require("./icons/GodjiraMferLogo.png").default}></img>
+					<img mr={10} src={require("./icons/GNFLogo2.png").default}></img>
 				</s.Container>
 
 				<s.Container
@@ -225,7 +225,7 @@ function App() {
 							color: "var(--accent-text)",
 						}}
 					>
-						Godjira Mfers Sale
+						Godjira Mfers Mints
 					</s.TextTitle>
 					<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
 						The collection is based on the Ethereum blockchain and includes 3,333 Godjira Mfers
@@ -236,7 +236,7 @@ function App() {
 					</s.Container> */}
 						<s.SpacerLarge />
 						<s.Container
-							flex={2}
+							flex={1}
 							jc={"center"}
 							ai={"center"}
 							style={{
@@ -247,7 +247,7 @@ function App() {
 								boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
 							}}
 						>
-							<s.TextTitle
+							{/* <s.TextTitle
 								style={{
 									textAlign: "center",
 									fontSize: 50,
@@ -256,17 +256,27 @@ function App() {
 								}}
 							>
 								Mint NFT's
-							</s.TextTitle>
-							{/* <s.TextDescription
+							</s.TextTitle> */}
+							<s.TextDescription
 								style={{
 									textAlign: "center",
-									fontSize: 15,
-									fontWeight: "bold",
+									fontSize: 40,
+									// fontWeight: "bold",
 									color: "var(--accent-text)",
 								}}
 							>
-								{data.totalSupply} / {CONFIG.MAX_SUPPLY} NFTs have been Minted
-							</s.TextDescription> */}
+								{CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY}
+							</s.TextDescription>
+							<s.TextDescription
+								style={{
+									textAlign: "center",
+									fontSize: 20,
+									// fontWeight: "bold",
+									color: "var(--accent-text)",
+								}}
+							>
+								Remaining
+							</s.TextDescription>
 							<s.TextDescription
 								style={{
 									textAlign: "center",
@@ -414,7 +424,7 @@ function App() {
 														getData();
 													}}
 												>
-													{claimingNft ? "BUSY" : "BUY"}
+													{claimingNft ? "BUSY" : "MINT"}
 												</StyledButton>
 											</s.Container>
 										</>
@@ -422,7 +432,7 @@ function App() {
 								</>
 							)}
 							<s.SpacerMedium />
-							<s.Container jc={"center"} ai={"center"} style={{ width: "80%" }}>
+							{/* <s.Container jc={"center"} ai={"center"} style={{ width: "80%" }}>
 								<s.smallText
 									style={{
 										textAlign: "center",
@@ -443,7 +453,7 @@ function App() {
 									We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to successfully
 									mint your NFT. We recommend that you don't lower the gas limit.
 								</s.smallText>
-							</s.Container>
+							</s.Container> */}
 						</s.Container>
 						<s.SpacerLarge />
 						<s.Container flex={1} jc={"center"} ai={"center"}>
@@ -486,12 +496,6 @@ function App() {
 				</s.TextTitle>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
 					We are the final fusion! Godjira mfers by sarjira.
-				</s.TextDescription>
-				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-					Godjira mfers by sarjira.
-				</s.TextDescription>
-				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-					No official discord. No roadmap. No drama. Just mfing vibes!
 				</s.TextDescription>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
 					Godjira mfers is a 3,333 unit collection that was inspired by sartoshi himself & the bad ass
