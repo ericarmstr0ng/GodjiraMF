@@ -5,6 +5,7 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import Header from "./Header";
+import store from "./redux/store";
 
 const truncate = (input, len) => (input.length > len ? `${input.substring(0, len)}...` : input);
 
@@ -99,7 +100,7 @@ function App() {
 	const blockchain = useSelector((state) => state.blockchain);
 	const data = useSelector((state) => state.data);
 	const [claimingNft, setClaimingNft] = useState(false);
-	const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
+	const [feedback, setFeedback] = useState(`Click MINT to mint your NFT. (MAX 20)`);
 	const [mintAmount, setMintAmount] = useState(1);
 	const [CONFIG, SET_CONFIG] = useState({
 		CONTRACT_ADDRESS: "",
@@ -130,7 +131,7 @@ function App() {
 		setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
 		setClaimingNft(true);
 		blockchain.smartContract.methods
-			.mint(blockchain.account, mintAmount)
+			.mint(mintAmount)
 			.send({
 				gasLimit: String(totalGasLimit),
 				to: CONFIG.CONTRACT_ADDRESS,
@@ -144,7 +145,7 @@ function App() {
 			})
 			.then((receipt) => {
 				console.log(receipt);
-				setFeedback(`WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`);
+				setFeedback(`WOW, you just minted ${CONFIG.NFT_NAME}! Go visit Opensea.io to view your NFT(s).`);
 				setClaimingNft(false);
 				dispatch(fetchData(blockchain.account));
 			});
@@ -160,8 +161,8 @@ function App() {
 
 	const incrementMintAmount = () => {
 		let newMintAmount = mintAmount + 1;
-		if (newMintAmount > 50) {
-			newMintAmount = 50;
+		if (newMintAmount > 20) {
+			newMintAmount = 20;
 		}
 		setMintAmount(newMintAmount);
 	};
@@ -199,7 +200,7 @@ function App() {
 				style={{ padding: 24, backgroundColor: "var(--primary)" }}
 				image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
 			>
-				<Header />
+				{/* <Header /> */}
 				<s.Container flex={1} jc={"center"} ai={"center"}>
 					{/* <StyledImg alt={"example"} src={"/config/images/GodjiraMferLogo.png"} /> */}
 					<img mr={10} src={require("./icons/GNFLogo2.png").default}></img>
@@ -251,6 +252,52 @@ function App() {
 								// boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
 							}}
 						>
+							{blockchain.account === "" || blockchain.smartContract === null ? (
+								<>
+									<s.TextDescription style={{ textAlign: "center", color: "var(--accent-text)" }}>
+										Sale is live! Connect Wallet to mint before they are all gone!
+									</s.TextDescription>
+									<s.SpacerSmall />
+								</>
+							) : (
+								<>
+									<s.TextDescription
+										style={{
+											textAlign: "center",
+											fontSize: 40,
+											// fontWeight: "bold",
+											color: "var(--accent-text)",
+										}}
+									>
+										{CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY}
+									</s.TextDescription>
+									<s.TextDescription
+										style={{
+											textAlign: "center",
+											fontSize: 20,
+											// fontWeight: "bold",
+											color: "var(--accent-text)",
+										}}
+									>
+										Remaining
+									</s.TextDescription>
+									<s.SpacerSmall />
+									<s.TextTitle style={{ textAlign: "center", color: "var(--accent-text)" }}>
+										{CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL}. (Excluding gas fees.)
+									</s.TextTitle>
+
+									<s.TextDescription
+										style={{
+											textAlign: "center",
+											color: "var(--primary-text)",
+										}}
+									>
+										{/* <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+              </StyledLink> */}
+									</s.TextDescription>
+								</>
+							)}
 							{/* <s.TextTitle
 								style={{
 									textAlign: "center",
@@ -261,36 +308,7 @@ function App() {
 							>
 								Mint NFT's
 							</s.TextTitle> */}
-							<s.TextDescription
-								style={{
-									textAlign: "center",
-									fontSize: 40,
-									// fontWeight: "bold",
-									color: "var(--accent-text)",
-								}}
-							>
-								{CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY}
-							</s.TextDescription>
-							<s.TextDescription
-								style={{
-									textAlign: "center",
-									fontSize: 20,
-									// fontWeight: "bold",
-									color: "var(--accent-text)",
-								}}
-							>
-								Remaining
-							</s.TextDescription>
-							<s.TextDescription
-								style={{
-									textAlign: "center",
-									color: "var(--primary-text)",
-								}}
-							>
-								{/* <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
-              </StyledLink> */}
-							</s.TextDescription>
+
 							<span
 								style={{
 									textAlign: "center",
@@ -333,11 +351,6 @@ function App() {
 								</>
 							) : (
 								<>
-									<s.TextTitle style={{ textAlign: "center", color: "var(--accent-text)" }}>
-										{CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL}. (Excluding gas fees.)
-									</s.TextTitle>
-
-									<s.SpacerSmall />
 									{blockchain.account === "" || blockchain.smartContract === null ? (
 										<s.Container ai={"center"} jc={"center"}>
 											<s.TextDescription
@@ -503,6 +516,16 @@ function App() {
 					alike and 8 very special 1 of 1’s. No official discord. No roadmap. But most importantly - No
 					boundaries! Feel free to use your Godjira mfer in any way you want.
 				</s.TextDescription>
+				<s.SpacerLarge />
+				<s.Container flex={1} fd={"row"} jc={"center"} ai={"center"}>
+					<a href="https://twitter.com/godjiramfers" rel="noreferrer" target="_blank">
+						<img src={require("./icons/twitter.svg").default}></img>
+					</a>
+					<s.SpacerSmall />
+					<a href="https://testnets.opensea.io/collection/godjira-mfers-nft" target="_blank" rel="noreferrer">
+						<img src={require("./icons/opensea.svg").default}></img>
+					</a>
+				</s.Container>
 			</s.pageContainer>
 		</s.Screen>
 	);

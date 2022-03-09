@@ -65,6 +65,19 @@ export const Container = styled.div`
 	background-position: center;
 `;
 
+export const iconContainer = styled.div`
+	display: flex;
+	flex: ${({ flex }) => (flex ? flex : 0)};
+	flex-direction: ${({ fd }) => (fd ? fd : "row")};
+	background-color: ${({ test }) => (test ? "pink" : "none")};
+	width: 100%;
+	background-image: ${({ image }) => (image ? `url(${image})` : "none")};
+	background-size: cover;
+	background-position: center;
+	justifycontent: "center";
+	alignitems: "center";
+`;
+
 export const TextTitle = styled.p`
 	color: var(--primary-text);
 	font-size: 22px;
