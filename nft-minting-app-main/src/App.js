@@ -82,10 +82,10 @@ export const StyledImg = styled.img`
 	// border-radius: 100%;
 	width: 200px;
 	@media (min-width: 900px) {
-		width: 250px;
+		width: 500px;
 	}
 	@media (min-width: 1000px) {
-		width: 300px;
+		width: 500px;
 	}
 	transition: width 0.5s;
 `;
@@ -209,14 +209,12 @@ function App() {
 				<s.Container
 					flex={1}
 					// ai={"center"}
-					style={{ padding: 24, backgroundColor: "var(--primary)" }}
+					style={{
+						padding: 24,
+						backgroundColor: "var(--primary)",
+					}}
 					image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
 				>
-					{/* <a href={CONFIG.MARKETPLACE_LINK}>
-          <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-        </a>
-        <s.SpacerSmall /> */}
-
 					<s.TextTitle
 						style={{
 							textAlign: "center",
@@ -226,7 +224,7 @@ function App() {
 							color: "var(--accent-text)",
 						}}
 					>
-						Godjira Mfers Mint
+						Stealth Mint
 					</s.TextTitle>
 					<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
 						The collection is based on the Ethereum blockchain and includes 3,333 Godjira Mfers
@@ -235,19 +233,23 @@ function App() {
 					<s.Container flex={1} jc={"center"} ai={"center"}>
 						<StyledImg alt={"example"} src={"/config/images/GodjiraGif.gif"} />
 					</s.Container>
-					<ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+					<s.SpacerLarge />
+
+					<ResponsiveWrapper flex={1} jc={"center"} ai={"center"} style={{ padding: 24 }}>
 						{/* <s.Container flex={1} jc={"center"} ai={"center"}>
 						<StyledImg alt={"example"} src={"/config/images/example.gif"} />
 					</s.Container> */}
-
+						<s.Container flex={1} />
 						<s.Container
-							flex={1}
+							flex={2}
 							jc={"center"}
 							ai={"center"}
 							style={{
 								// backgroundColor: "var(--accent)",
 								padding: 24,
 								borderRadius: 24,
+								border: "inset var(--secondary)",
+								boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
 								// border: "4px dashed var(--secondary)",
 								// boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
 							}}
@@ -469,6 +471,7 @@ function App() {
 								</s.smallText>
 							</s.Container> */}
 						</s.Container>
+						<s.Container flex={1} />
 					</ResponsiveWrapper>
 					<s.SpacerMedium />
 					{/* <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
