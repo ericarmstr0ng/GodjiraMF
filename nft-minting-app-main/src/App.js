@@ -80,7 +80,7 @@ export const StyledImg = styled.img`
 	// border: 4px dashed var(--secondary);
 	background-color: var(--accent);
 	// border-radius: 100%;
-	width: 200px;
+	width: 400px;
 	@media (min-width: 900px) {
 		width: 500px;
 	}
@@ -203,7 +203,13 @@ function App() {
 				{/* <Header /> */}
 				<s.Container flex={1} jc={"center"} ai={"center"}>
 					{/* <StyledImg alt={"example"} src={"/config/images/GodjiraMferLogo.png"} /> */}
-					<img mr={10} src={require("./icons/GNFLogo2.png").default}></img>
+					<img
+						mr={10}
+						src={require("./icons/GNFLogo2.png").default}
+						style={{
+							maxWidth: "100%",
+						}}
+					></img>
 				</s.Container>
 
 				<s.Container
@@ -227,7 +233,7 @@ function App() {
 						Stealth Mint
 					</s.TextTitle>
 					<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-						The collection is based on the Ethereum blockchain and includes 3,333 Godjira Mfers
+						The collection is based on the Ethereum blockchain and includes 1111 Godjira Mfers
 					</s.TextDescription>
 					<s.SpacerLarge />
 					<s.Container flex={1} jc={"center"} ai={"center"}>
@@ -511,12 +517,12 @@ function App() {
 					We are the final fusion! Godjira mfers by sarjira.
 				</s.TextDescription>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-					Godjira mfers is a 3,333 unit collection that was inspired by sartoshi himself & the bad ass
+					Godjira mfers is a 1111 unit collection that was inspired by sartoshi himself & the bad ass
 					community at Project Godjira.
 				</s.TextDescription>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-					This collection consists of over 72 unique hand drawn traits spanning various rarities with no two
-					alike and 8 very special 1 of 1’s. No official discord. No roadmap. But most importantly - No
+					This collection consists of over 69 unique hand drawn traits spanning various rarities with no two
+					alike and 9 very special 1 of 1’s. No official discord. No roadmap. But most importantly - No
 					boundaries! Feel free to use your Godjira mfer in any way you want.
 				</s.TextDescription>
 				<s.SpacerLarge />
