@@ -531,7 +531,7 @@ function App() {
 						<img src={require("./icons/twitter.svg").default}></img>
 					</a>
 					<s.SpacerSmall />
-					<a href="https://testnets.opensea.io/collection/godjira-mfers-nft" target="_blank" rel="noreferrer">
+					<a href="https://opensea.io/collection/godjira-mfers-1" target="_blank" rel="noreferrer">
 						<img src={require("./icons/opensea.svg").default}></img>
 					</a>
 				</s.Container>
