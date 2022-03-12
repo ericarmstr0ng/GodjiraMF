@@ -233,7 +233,7 @@ function App() {
 						Stealth Mint is LIVE!!!!
 					</s.TextTitle>
 					<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-						The collection is based on the Ethereum blockchain and includes 1111 Godjira Mfers
+						The collection is based on the Ethereum blockchain and includes 555 Godjira Mfers
 					</s.TextDescription>
 					<s.SpacerLarge />
 					<s.Container flex={1} jc={"center"} ai={"center"}>
@@ -517,8 +517,8 @@ function App() {
 					We are the final fusion! Godjira mfers by sarjira.
 				</s.TextDescription>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
-					Godjira mfers is a 1111 unit collection that was inspired by sartoshi himself & the bad ass
-					community at Project Godjira.
+					Godjira mfers is a 555 unit collection that was inspired by sartoshi himself & the bad ass community
+					at Project Godjira.
 				</s.TextDescription>
 				<s.TextDescription style={{ textAlign: "center", width: "100%", color: "var(--accent-text)" }}>
 					This collection consists of over 69 unique hand drawn traits spanning various rarities with no two
