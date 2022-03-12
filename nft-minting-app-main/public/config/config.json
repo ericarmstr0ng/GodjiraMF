@@ -1,16 +1,16 @@
 {
-  "CONTRACT_ADDRESS": "0x2354294F5060622337AF3cC6622BDbF442FB4387",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x2354294F5060622337AF3cC6622BDbF442FB4387",
+  "CONTRACT_ADDRESS": "0x00e88BEb372d0be3801F0C8A4CDa8F7253174B66",
+  "SCAN_LINK": "https://etherscan.io/address/0x00e88BEb372d0be3801F0C8A4CDa8F7253174B66",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "Eth",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Godjira Mfers",
   "SYMBOL": "GODJIRAMF",
   "MAX_SUPPLY": 1111,
-  "WEI_COST": 6900000000000000,
-  "DISPLAY_COST": 0.0069,
+  "WEI_COST": 10000000000000000,
+  "DISPLAY_COST": 0.01,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/godjira-mfers-nft",
