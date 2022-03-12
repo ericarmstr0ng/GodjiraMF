@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x00e88BEb372d0be3801F0C8A4CDa8F7253174B66",
-  "SCAN_LINK": "https://etherscan.io/address/0x00e88BEb372d0be3801F0C8A4CDa8F7253174B66",
+  "CONTRACT_ADDRESS": "0xeB5dD7fF98C39E3a336A1Cab4F744b1E43902c01",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xeB5dD7fF98C39E3a336A1Cab4F744b1E43902c01",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "Eth",
-    "ID": 1
+    "ID": 4
   },
   "NFT_NAME": "Godjira Mfers",
   "SYMBOL": "GODJIRAMF",
